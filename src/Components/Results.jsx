@@ -59,7 +59,7 @@ const Results = () => {
                     
                     { ([null,''].includes(ansResults.topic)) ? (<></>) : (
                     <h2 className="ans-title">
-                      <a href={ansResults.url}>
+                      <a href={ansResults.url} target='_blank'>
                         {ansResults.topic}
                       </a>
                     </h2>
@@ -81,7 +81,7 @@ const Results = () => {
                       src={`https://www.google.com/s2/favicons?domain=${item.href}&sz=64`}
                       alt="favicon"
                     />
-                    <a href={item.href}>
+                    <a href={item.href} target='_blank'>
                       <p className="result-siteName">
                         {extractDomain(item.href)}
                       </p>
@@ -106,7 +106,7 @@ const Results = () => {
           <div className="image-results-container">
             {imgResults.length > 0 ? (
               imgResults.map((item, index) => (
-                <a href={item.url}>
+                <a href={item.url} target='_blank'>
                   <div key={index} className="img-item">
                     <div className="imgContainer">
                       <img src={item.thumbnail} alt={item.title} />
@@ -171,7 +171,7 @@ const Results = () => {
                       src={`https://www.google.com/s2/favicons?domain=${item.url}&sz=64`}
                       alt="favicon"
                     />
-                    <a href={item.url}>
+                    <a href={item.url} target='_blank'>
                       <p className="result-siteName">
                         {extractDomain(item.url)}
                       </p>
